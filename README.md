@@ -1,149 +1,45 @@
-# 🎙️ LexiVoice AI – Voice-Powered Legal Assistant
+# 🎙️LexiVoice AI — Local LLM Voice Legal Assistant (Colab)
 
-LexiVoice AI is a voice-enabled legal assistant that provides real-time legal information, answers queries, and drafts standard legal documents. Powered by a fine-tuned Large Language Model (LLM) for the legal domain.
+What it is. A voice interface over a locally fine-tuned transformer LLM for answering common legal questions. No OpenAI/ChatGPT calls.
 
-# 📌 Overview
+# Pipeline
 
-* LexiVoice AI bridges the gap between complex legal language and everyday users by offering:
+* ASR: Capture speech and transcribe (Whisper or Google STT in Colab).
 
-* Voice-powered interactions
+* LLM: Local small model (GPT-like) fine-tuned for legal Q&A with prompt templates & few-shot examples.
 
-* Instant legal answers with high accuracy
+* TTS: Convert the answer back to speech (gTTS/Coqui).
 
-* Automated legal drafting (agreements, notices, contracts, petitions)
+* UI: Streamlit app for talk-back interaction.
 
-With fine-tuned LLMs trained on legal datasets, LexiVoice AI achieves:
+# Tech 🤗
 
-* ⚖️ 92% accuracy in relevant answers
+* PyTorch,  Transformers & Datasets, Tokenizers
 
-* ⏳ 80% reduction in manual legal research time
+* Whisper / Google STT, gTTS / Coqui TTS
 
-* ⚡ <200ms latency for real-time responses (AWS deployed)
+* Gradio/Streamlit, Google Colab (T4/V100)
 
-# ✨ Features
+# summary 🤗
 
-* 🎙️ Voice-first Assistant — Ask questions and get spoken answers
+* Base: small GPT-style model (e.g., ~125M–350M params).
 
-* 🧠 LLM Fine-tuned for Legal Domain — IPC, US Code, case law, contracts
+* Data: curated public legal FAQs + synthetic QA; cleaned and split with stratified sampling.
 
-* 📑 Auto Drafting — Legal notices, NDAs, service agreements, petitions
+* Fine-tune: next-token objective; LoRA optional for fast iteration.
 
-* 📊 Knowledge Summaries — Complex legal sections explained simply
+* Eval: exact-match & ROUGE on a held-out set; report latency and WER impact from ASR.
 
-* 🌐 Cloud Deployed — FastAPI backend + AWS infra ensures scalability
+# Limits
 
-* 📱 Cross-Platform — Web + Mobile integration ready
+* Not a substitute for legal advice.
 
-# 🛠️ Tech Stack
+* Hallucinations possible; encourage follow-up checks.
 
-* Frontend: React (web), Flutter (mobile prototype)
+# Run in Colab
 
-* Backend: FastAPI (Python), WebSockets for real-time voice streaming
+* Notebook includes setup, model load, weights, and a one-click Gradio demo.
 
-* AI/ML: HuggingFace Transformers, LoRA fine-tuning
 
-* Infra: AWS Lambda, EC2, S3, RDS
-
-* Voice: Whisper (speech-to-text), gTTS (text-to-speech)
-
-# 🚀 Roadmap
-✅ Phase 1: Core AI Lawyer (Completed)
-
-* Text-based chatbot for legal queries
-
-* Legal document drafting
-
-🔄 Phase 2: Voice Layer (In Progress)
-
-* Real-time speech recognition & synthesis
-
-* Voice-based Q&A with sub-200ms latency
-
-🔜 Phase 3: LexiVoice 1.0 (Before October 2025)
-
-* End-to-end voice-powered assistant
-
-* Enhanced jurisdiction-specific support
-
-* Public Beta Release 🚀
-
-# 📅 Milestone
-
-* Target Rollout: Before October 2025
-
-* Deliverables:
-
-  * Real-time voice-based legal assistant
-
-  * Multi-jurisdiction knowledge base
-
-  * Beta release with AWS deployment
-
-
-# 📖 Usage
-
-```
-# Clone repository
-git clone https://github.com/your-username/lexivoice-ai.git
-cd lexivoice-ai
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run backend
-uvicorn app:app --reload
-
-# Access frontend
-http://localhost:3000
-```
-
-# ⚠️ Disclaimer
-
-LexiVoice AI is designed for educational and research purposes only.
-It does not provide legally binding advice. Always consult a licensed attorney for official legal guidance.
-
-# 🤝 Contributing
-
-Contributions are welcome in:
-
-* Expanding legal datasets
-
-* Improving speech-to-text pipelines
-
-* Multi-language legal support
-
-# 📜 License
-
-Licensed under the Apache 2.0 License.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Next upgrades. RAG with a statutes/FAQs index, LoRA on domain-specific corpora, quantization (GGUF/8-bit) for CPU-only runs.
 
