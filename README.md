@@ -1,4 +1,13 @@
-# 🎙️LexiVoice AI — Local LLM Voice Legal Assistant (Colab)
+# 🎙️LexiVoice AI — Local LLM Voice Legal Assistant 
+
+```
+ _              ___     __    _               _    ___ 
+| |    _____  _(_) \   / /__ (_) ___ ___     / \  |_ _|
+| |   / _ \ \/ / |\ \ / / _ \| |/ __/ _ \   / _ \  | | 
+| |__|  __/>  <| | \ V / (_) | | (_|  __/  / ___ \ | | 
+|_____\___/_/\_\_|  \_/ \___/|_|\___\___| /_/   \_\___|
+
+```
 
 What it is. A voice interface over a locally fine-tuned transformer LLM for answering common legal questions. No OpenAI/ChatGPT calls.
 
