@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Voice AI - Your Personal Legal Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">LexiVoice AI</div>
+            <div class="nav-links">
+                <a href="#features-section">Features</a>
+                <a href="#learn-section">Learn</a>
+                <a href="#blog-section">Blog</a>
+                <a href="#faq-section">FAQ</a>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#try" class="cta-button nav-cta">Try for Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>LexiVoice AI - Your Personal Legal Assistant</h1>
+        <p>Instant voice-based legal advice with cutting-edge AI technology. No storage, maximum privacy, available 24/7.</p>
+        <button class="cta-button main-cta" onclick="openModal()">Start </button>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Welcome to Legal Voice AI</h2>
+            <p>Start your free trial now and experience AI-powered legal assistance with voice integration. Your conversations are deleted instantly.</p>
+            <button class="cta-button" onclick="startTrial()">Start Trial</button>
+        </div>
+    </div>
+
+    <section class="features-section" id="features-section">
+        <h2>Features of LexiVoice AI</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-search icon"></i>
+                <h3>AI-Powered Research</h3>
+                <p>Instant web research with real-time analysis, saving you hours.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-microphone-alt icon"></i>
+                <h3>Voice Interaction</h3>
+                <p>Chat with AI using advanced natural language voice technology.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-secret icon"></i>
+                <h3>Privacy Ensured</h3>
+                <p>Your conversations are deleted on the spot – no data stored.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-sync-alt icon"></i>
+                <h3>24/7 Availability</h3>
+                <p>Access legal assistance anytime, anywhere, on demand.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt icon"></i>
+                <h3>Multi-Platform</h3>
+                <p>Seamlessly access our services on web, iOS, and Android devices.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gavel icon"></i>
+                <h3>Legal Expertise</h3>
+                <p>Get insights into various legal fields from a knowledgeable AI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="learn-section" id="learn-section">
+        <div class="learn-content">
+            <div class="learn-text">
+                <i class="fas fa-graduation-cap icon"></i>
+                <h2>How to use AI Lawyer</h2>
+                <p>The tutorial video shows you how good it is to integrate our lawyer online tool into your life.</p>
+            </div>
+            <div class="learn-video">
+                <div class="play-button-overlay">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section" id="blog-section">
+        <div class="blog-header">
+            <span class="blog-tag">Blog</span>
+            <h2>More about Legal AI market</h2>
+            <p class="tagline">Expert advices and news from our blog to stay up-to-date on the latest trends.</p>
+            <button class="cta-button blog-cta">Explore blog</button>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-card-content">
+                    <h3>Lease Agreements: Structuring Legally Sound and Enforceable Rental Contracts</h3>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-clock"></i> 4 min read</span>
+                        <a href="https://ailawyer.pro/blog/lease-agreements-structuring-legally-sound-and-enforceable-rental-contracts" target="_blank" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-content">
+                    <h3>Best Software For Lawyers & Law Firms</h3>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-clock"></i> 5 min read</span>
+                        <a href="https://ailawyer.pro/blog/lease-agreements-structuring-legally-sound-and-enforceable-rental-contracts" target="_blank" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-card-content">
+                    <h3>AI Lawyer VS Human Lawyer: Who Will Win?</h3>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-clock"></i> 3 min read</span>
+                        <a href="https://ailawyer.pro/blog/lease-agreements-structuring-legally-sound-and-enforceable-rental-contracts" target="_blank" class="read-link">Read <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq-section">
+        <div class="faq-header">
+            <span class="faq-tag">FAQ</span>
+            <h2>Have a question?</h2>
+            <p class="tagline">Browse through our frequently asked topics.</p>
+        </div>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is AI Lawyer?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>AI Lawyer is a cutting-edge platform that transforms law market using artificial intelligence. It automates research, simplifies complex terms, and handles documents efficiently. Ideal for individuals seeking affordable consultation and for professionals and students aiming to streamline their work. It offers personalized customization, multi-platform access, and prioritizes privacy, making it a valuable tool in LegalTech market.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Who is your platform for?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>AI Lawyer caters to a diverse range of users, with the aim of making justice more accessible to everyone. It is ideal for:</p>
+                    <ul>
+                        <li><b>Consumers:</b> Providing easy-to-understand explanations of terms and assistance in document handling.</li>
+                        <li><b>Lawyers:</b> Automating routine tasks like research and paperwork, allowing lawyers to focus on client relationships and other critical aspects of their practice.</li>
+                        <li><b>Law Students:</b> Offering a valuable learning tool to help prepare for a career in law, with features that assist in research writing and case briefs.</li>
+                        <li><b>Law Firms:</b> Enhancing operational efficiency and client service quality by automating firm's processes and research, allowing to optimize resource allocation and focus on more complex matters.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What countries/languages does it work for?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our platform works worldwide and in many languages. You can ask questions in your language and get answers in the same language. This makes it easy for people from different places to use it.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How to start using AI Lawyer?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>To begin using it, simply sign up with your Google/Apple account or any other email. We provide a free trial for all new users, allowing you to experience the full range of features and benefits of the platform without any initial investment.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How to get "Students & teachers" discount?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If you're a student or teacher, you can get half off the price. Open our app (Web, iOS or Android), click on "Activate Pro" and choose the "Students and Teachers" option above. While we don't check your student or teacher status right away, we may ask for some verification later to confirm your educational affiliation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I receive a refund if I'm not satisfied?
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. If you're not happy with us, you can get your money back easily, no questions asked. To receive your money, please contact us at hi@ailawyer.pro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Legal Voice AI. All rights reserved. <br> Crafted with precision in Pune, Maharashtra, India. <i class="fas fa-heart"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
