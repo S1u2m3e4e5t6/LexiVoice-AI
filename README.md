@@ -8,6 +8,15 @@
 |_____\___/_/\_\_|  \_/ \___/|_|\___\___| /_/   \_\___|
 
 ```
+## code Google Colab Link
+```
+https://colab.research.google.com/drive/1JqRm2RkXb9YC87159b5QY-lNMIHgKW_G?usp=sharing
+
+```
+
+
+
+
 ### prototype website
 ```
 https://s1u2m3e4e5t6.github.io/LexiVoice-AI/
